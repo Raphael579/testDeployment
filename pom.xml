@@ -38,5 +38,4 @@
 		</plugins>
 		<finalName>test-deployment</finalName>
 	</build>
-
 </project>

@@ -1,13 +1,9 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
   build:
     commands:
-      - echo "Entering the build phase..."
-      - mvn package
+      - mvn clean package
 
   post_build:
     commands:
@@ -15,5 +11,5 @@ phases:
 
 artifacts:
   files:
-    - "target/test-deployment.jar"
-  discard-paths: true
+    - target/test-deployment.jar
+  discard-paths: yes
