@@ -1,10 +1,8 @@
 package com.testForAwsDeployment.testDeployment;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpStatus;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +12,7 @@ import java.util.Map;
 public class TestController {
 
     @GetMapping("/info")
-    public ResponseEntity<Map<String, Object>> getInfo() {
+    public Map<String, Object> getInfo() {
         Map<String, Object> responseBody = new HashMap<>();
 
         responseBody.put("isBase64Encoded", false);
@@ -27,7 +25,7 @@ public class TestController {
 
         responseBody.put("body", "Hallo Welt");
 
-        return ResponseEntity.status(HttpStatus.OK).body(responseBody);
+        return responseBody;
     }
 }
 
