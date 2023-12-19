@@ -24,7 +24,6 @@ public class TestController {
         responseBody.put("headers", headers);
 
         responseBody.put("body", "Hallo Welt");
-
         return responseBody;
     }
 }
