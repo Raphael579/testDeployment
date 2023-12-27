@@ -11,5 +11,5 @@ phases:
 
 artifacts:
   files:
-    - target/test-deployment.jar
+    - target/testDeployment-0.0.1-SNAPSHOT.jar
   discard-paths: true
