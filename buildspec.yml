@@ -1,15 +1,31 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - echo "Install Phase: Installing dependencies..."
+
+  pre_build:
+    commands:
+      - echo "Pre-Build Phase: Nothing to do..."
+
   build:
     commands:
-      - mvn clean package
+      - echo "Build Phase: Building Spring Boot application..."
+      - mvn clean install -DskipTests=true
+      # Hier wird das Maven-Projekt gebaut und das JAR-Paket erstellt
+      - mv target/*.jar application.jar
+      # Du kannst den Namen der JAR-Datei hier entsprechend anpassen, wenn nötig
 
   post_build:
     commands:
-      - echo "Build completed successfully"
+      - echo "Post-Build Phase: Uploading artifact..."
+      - mv application.jar build/
+      # Verschiebe die JAR-Datei in ein Verzeichnis "build" im Arbeitsverzeichnis
 
 artifacts:
   files:
-    - target/test-deployment.jar
-  discard-paths: true
+    - build/application.jar
+  discard-paths: yes
