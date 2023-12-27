@@ -8,8 +8,6 @@ phases:
       - cp target/test-deployment.jar artifacts/
       - zip -r test-deployment.zip artifacts/*
 
-  artifacts:
-
 artifacts:
   files:
     - test-deployment.zip
