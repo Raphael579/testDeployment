@@ -7,5 +7,5 @@ phases:
 
 artifacts:
   files:
-    - target/*.jar
+    - target/test-deployment.jar
   discard-paths: true
