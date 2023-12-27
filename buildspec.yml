@@ -4,9 +4,12 @@ phases:
   build:
     commands:
       - mvn clean package
-      - java -version
+      - mkdir artifacts
+      - cp target/test-deployment.jar artifacts/
+      - zip -r test-deployment.zip artifacts/*
+
+  artifacts:
 
 artifacts:
   files:
-    - target/test-deployment.jar
-  discard-paths: true
+    - test-deployment.zip
