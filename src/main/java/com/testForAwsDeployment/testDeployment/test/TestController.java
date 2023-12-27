@@ -1,4 +1,4 @@
-package com.testForAwsDeployment.testDeployment;
+package com.testForAwsDeployment.testDeployment.test;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
