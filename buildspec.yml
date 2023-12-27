@@ -8,8 +8,9 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully"
+      - cp target/*.jar application.jar
 
 artifacts:
   files:
-    - target/*
-  discard-paths: yes
+    - application.jar
+  discard-paths: true
