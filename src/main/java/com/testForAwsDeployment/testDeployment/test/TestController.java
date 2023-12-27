@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class TestController {
 
+
     @CrossOrigin(origins = "*")
     @GetMapping("/info")
     public ResponseEntity<String> getInfo() {
